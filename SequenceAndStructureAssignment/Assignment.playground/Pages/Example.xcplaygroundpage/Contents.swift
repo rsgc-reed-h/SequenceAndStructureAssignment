@@ -30,13 +30,9 @@ canvas.drawShapesWithFill = false
 canvas.defaultBorderWidth = 1
 
 // This loop makes a 10 rows of columns
-for x in stride(from: 25, through: 475, by: 50){
-
-    // This loop makes a single column, bottom to top
-    for y in stride(from: 25, through: 475, by: 50) {
-        
-        // Draw the shapes
-        canvas.drawEllipse(centreX: x, centreY: y, width: 2, height: 2)
+for x in stride(from: 0, through: 475, by: 15){
+    for y in stride(from: 0, through: 475, by: 15) {
+                canvas.drawEllipse(centreX: x, centreY: y, width: 7, height: 7)
         canvas.drawRectangle(centreX: x, centreY: y, width: 50, height: 50)
     }
 }
