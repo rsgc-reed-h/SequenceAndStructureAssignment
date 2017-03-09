@@ -19,14 +19,13 @@ import Cocoa
 import PlaygroundSupport
 
 // Create canvas
-
 let canvas = Canvas(width: 500, height: 500)
-// Generate a grid
+// Background color
+canvas.drawRectangle(centreX: 0, centreY: 0, width: 500, height: 500, borderWidth: 500)
 canvas.drawShapesWithFill = false
 canvas.defaultBorderWidth = 1
 
-
-
+//The X of circles with a hue from 0 through 180 by 3
 for x in stride(from: 0, through: 500, by: 75){
 for diameter in stride(from: 0, through: 180, by: 5){
     canvas.drawShapesWithBorders = true
@@ -38,6 +37,7 @@ for diameter in stride(from: 0, through: 180, by: 5){
 }
 }
 
+//drawing squares around the letters
 canvas.drawShapesWithBorders = true
 canvas.drawShapesWithFill = true
 canvas.fillColor = Color.purple
@@ -46,6 +46,8 @@ canvas.drawRectangle(centreX: 58, centreY: 260, width: 50, height: 50, borderWid
 canvas.drawRectangle(centreX: 258, centreY: 60, width: 50, height: 50, borderWidth: 5)
 canvas.drawRectangle(centreX: 458, centreY: 260, width: 50, height: 50, borderWidth: 5)
 
+
+//Drawing text around the canvas spelling "XCODE"
 canvas.drawText(message: "C", size: 20, x: 250, y: 450)
 canvas.drawText(message: "O", size: 20, x: 50, y: 250)
 canvas.drawText(message: "D", size: 20, x: 250, y: 50)
